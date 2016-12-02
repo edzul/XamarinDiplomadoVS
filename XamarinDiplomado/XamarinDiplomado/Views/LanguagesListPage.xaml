@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinDiplomado.Views.LanguagesListPage" Title="Languages"
+             xmlns:VM="clr-namespace:XamarinDiplomado.ViewModels">
+
+<ContentPage.BindingContext>
+  <VM:LanguagesVM></VM:LanguagesVM>
+</ContentPage.BindingContext>
+  <StackLayout Orientation="Vertical"
+       Spacing="20">
+    <ListView ItemsSource="{Binding Items}"
+              IsRefreshing="{Binding IsBusy}"
+              IsPullToRefreshEnabled="True"
+              RefreshCommand="{Binding GetLanguagesCommand}">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <TextCell Text="{Binding Name}"
+                    Detail="{Binding Uses, StringFormat='Use: {0}'}"></TextCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>  
+  </StackLayout>
+
+</ContentPage>

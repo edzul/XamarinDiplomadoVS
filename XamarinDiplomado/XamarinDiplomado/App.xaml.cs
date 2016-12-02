@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
+using XamarinDiplomado.Views;
 
 namespace XamarinDiplomado
 {
@@ -12,8 +13,7 @@ namespace XamarinDiplomado
         public App()
         {
             InitializeComponent();
-
-            MainPage = new XamarinDiplomado.MainPage();
+            MainPage = new NavigationPage(new LanguagesListPage());
         }
 
         protected override void OnStart()

@@ -18,6 +18,9 @@ namespace XamarinDiplomado.Models
         public string Name { get; set; }
         
         [JsonProperty]
+        public string Uses { get; set; }
+
+        [JsonProperty]
         public string Imperative { get; set; }
 
         [JsonProperty]
