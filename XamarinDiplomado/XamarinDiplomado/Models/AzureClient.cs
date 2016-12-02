@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//GIT REPO: https://github.com/edzul/XamarinDiplomadoVS
 namespace XamarinDiplomado.Models
 {
     public class AzureClient

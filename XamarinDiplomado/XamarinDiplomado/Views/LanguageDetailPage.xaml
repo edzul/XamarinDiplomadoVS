@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinDiplomado.Views.LanguageDetailPage">
+  <StackLayout Spacing="20" Padding="20, 20, 0, 0">
+    <Label Text="{Binding ObjectOriented, StringFormat='Orientado a objectos: {0}'}"></Label>
+    <Label Text="{Binding Imperative, StringFormat='Imperativo {0}'}"></Label>
+    <Label Text="{Binding Functional, StringFormat='Funcional {0}'}"></Label>
+    <Label Text="{Binding Procedural, StringFormat='Procedural: {0}'}"></Label>
+    <Label Text="{Binding Generic, StringFormat='Generico: {0}'}"></Label>
+    <Label Text="{Binding Reflective, StringFormat='Reflectivo: {0}'}"></Label>
+    <Label Text="{Binding EventDriven, StringFormat='Dirigido a Eventos: {0}'}"></Label>
+  </StackLayout>
+</ContentPage>

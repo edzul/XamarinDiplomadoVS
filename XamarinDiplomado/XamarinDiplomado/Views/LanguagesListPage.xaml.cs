@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using XamarinDiplomado.Models;
 
 namespace XamarinDiplomado.Views
 {
@@ -13,6 +14,18 @@ namespace XamarinDiplomado.Views
         public LanguagesListPage()
         {
             InitializeComponent();
+            lvwItems.ItemSelected += Language_Selected; 
+        }
+
+        private async void Language_Selected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var selectedLanguage = e.SelectedItem as Language;
+
+            if (selectedLanguage != null)
+            {
+                await Navigation.PushAsync(new Views.LanguageDetailPage(selectedLanguage));
+                lvwItems.SelectedItem = null;
+            }
         }
     }
 }

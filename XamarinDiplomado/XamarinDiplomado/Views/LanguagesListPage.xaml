@@ -7,9 +7,9 @@
 <ContentPage.BindingContext>
   <VM:LanguagesVM></VM:LanguagesVM>
 </ContentPage.BindingContext>
-  <StackLayout Orientation="Vertical"
+  <StackLayout Orientation="Vertical" 
        Spacing="20">
-    <ListView ItemsSource="{Binding Items}"
+    <ListView x:Name="lvwItems" ItemsSource="{Binding Items}"
               IsRefreshing="{Binding IsBusy}"
               IsPullToRefreshEnabled="True"
               RefreshCommand="{Binding GetLanguagesCommand}">
